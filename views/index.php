@@ -20,7 +20,7 @@
                             <th>ID</th>
                             <th>Concepto</th>
                             <th>Fecha</th>
-                            <th>Importe</th>
+                            <th class="text-center">Importe</th>
                             <th width="10%"></th>
                         </tr>
                     </thead>
@@ -30,8 +30,8 @@
                             <td><?=$deposito->id?></td>
                             <td><?=$deposito->concepto?></td>
                             <td><?=$deposito->fecha_deposito?></td>
-                            <td><?=$deposito->importe?></td>
-                            <td>
+                            <td class="text-right"><?=number_format($deposito->importe,2)?></td>
+                            <td class="text-center">
                             <?php if($status == 'pendientes'): ?>
                                 <a href="<?=base_url('apoyos/enviar/'.$deposito->id_deposito)?>" class="btn btn-small"><i class="fa fa-upload"></i></a>
                             <?php else:?>
